@@ -1,4 +1,3 @@
-shopt -s extglob
 fileName=$1
 outName=${fileName%.*}
 #remove spaces
