@@ -7,17 +7,6 @@ outName="${outName#"docs/"}"
 
 shift
 
-unameOut="$(uname -s)"
-case "${unameOut}" in
-    Linux*)     machine=Linux;;
-    Darwin*)    machine=Mac;;
-    CYGWIN*)    machine=Cygwin;;
-    MINGW*)     machine=MinGw;;
-    MSYS_NT*)   machine=Git;;
-    *)          machine="UNKNOWN:${unameOut}"
-esac
-echo ${machine}
-
 echo "\033[0;36m     $fileName to out/$outName \033[0m"
 
 mkdir -p "out/$outName"
