@@ -24,11 +24,13 @@ pandoc "$(pwd)/$fileName" \
     --css template/pandoc.css \
     --css template/pandoc-solarized.css \
     --css template/tufte-extra.css \
-    --output "$(pwd)/out/$outName/index.html"
+    --output "$(pwd)/out/$outName/index.html" \
     $@
 
 
 gsed -i -f template/post.sed "out/$outName/index.html"
 
-find "$(dirname "$fileName")" -type f ! -name "*.md" -exec cp {} "out/$(dirname "$outName")" \;
-
+if [[ $fileName != "docs/index.md" ]]; then
+    find "$(dirname "$fileName")" -type f ! -name "*.md" -exec cp {} "out/$(dirname "$outName")" \;
+    echo "- [$(basename "${fileName%.*}")]($outName/index.html)" >> "docs/index.md"
+fi
