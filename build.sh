@@ -28,7 +28,7 @@ pandoc "$(pwd)/$fileName" \
     $@
 
 
-sed -i -f template/post.sed "out/$outName/index.html"
+gsed -i -f template/post.sed "out/$outName/index.html"
 
 find "$(dirname "$fileName")" -type f ! -name "*.md" -exec cp {} "out/$(dirname "$outName")" \;
 
