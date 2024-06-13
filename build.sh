@@ -3,14 +3,16 @@ fileName=$1
 outName=${fileName%.*}
 #remove spaces
 outName="${outName// /_}"
+#remove spaces
+outName="${outName#"docs/"}"
 
 shift
 
-echo "\033[0;36m     docs/$fileName to out/$outName \033[0m"
+echo "\033[0;36m     $fileName to out/$outName \033[0m"
 
 mkdir -p "out/$outName"
 
-pandoc "$(pwd)/docs/$fileName" \
+pandoc "$(pwd)/$fileName" \
     --katex \
     --section-divs \
     --from markdown+tex_math_single_backslash \
@@ -26,9 +28,7 @@ pandoc "$(pwd)/docs/$fileName" \
     --output "$(pwd)/out/$outName/index.html"
     $@
 
-echo "out/$outName/index.html"
-
 gsed -i -f template/post.sed "out/$outName/index.html"
 
-cp -a "docs/$(dirname "$fileName")/." "out/$(dirname "$outName")"
-rm "out/$(dirname "$outName")/$(basename "$fileName")"
+find "$(dirname "$fileName")" -type f ! -name "*.md" -exec cp {} "out/$(dirname "$outName")" \;
+
