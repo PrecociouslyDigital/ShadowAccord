@@ -7,6 +7,17 @@ outName="${outName#"docs/"}"
 
 shift
 
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     machine=Linux;;
+    Darwin*)    machine=Mac;;
+    CYGWIN*)    machine=Cygwin;;
+    MINGW*)     machine=MinGw;;
+    MSYS_NT*)   machine=Git;;
+    *)          machine="UNKNOWN:${unameOut}"
+esac
+echo ${machine}
+
 echo "\033[0;36m     $fileName to out/$outName \033[0m"
 
 mkdir -p "out/$outName"
@@ -27,7 +38,8 @@ pandoc "$(pwd)/$fileName" \
     --output "$(pwd)/out/$outName/index.html"
     $@
 
-gsed -i -f template/post.sed "out/$outName/index.html"
+
+sed -i -f template/post.sed "out/$outName/index.html"
 
 find "$(dirname "$fileName")" -type f ! -name "*.md" -exec cp {} "out/$(dirname "$outName")" \;
 
