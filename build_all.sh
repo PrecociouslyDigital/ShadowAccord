@@ -1,6 +1,11 @@
 rm -rf out
-
 mkdir out
+
+if [[ $2 == "--build-pdf" ]]; then
+    rm -rf print
+    mkdir print
+fi
+
 cp -r css out
 
 rm docs/index.md

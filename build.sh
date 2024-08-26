@@ -7,18 +7,14 @@ outName="${outName#"docs/"}"
 
 shift
 
-should_build_pdf=false
-if [[ $1 == "--build-pdf" ]]; then
-    should_build_pdf=true
-    shift
-fi
-
 echo "\033[0;36m     $fileName to out/$outName \033[0m"
 
 mkdir -p "out/$outName"
 
-if $should_build_pdf; then
+if [[ $1 == "--build-pdf" ]]; then
+    shift
     echo "building pdf"
+    mkdir -p "print/$outName"
 fi
 
 pandoc "$(pwd)/$fileName" \
