@@ -18,7 +18,7 @@ for folder in docs/*; do
         continue
     fi
     echo "### ${folder#"docs/"}" >> docs/index.md
-    find "$folder" -type f -name "*.md"  -exec ./build.sh {} \;
+    find "$folder" -type f -name "*.md"  -exec ./build.sh {} $@ \;
 done
 
 ./build.sh docs/index.md 
