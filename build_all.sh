@@ -1,7 +1,7 @@
 rm -rf out
 mkdir out
 
-if [[ $2 == "--build-pdf" ]]; then
+if [[ $1 == "--build-pdf" ]]; then
     rm -rf print
     mkdir print
 fi
@@ -23,7 +23,7 @@ for folder in docs/*; do
         continue
     fi
     echo "### ${folder#"docs/"}" >> docs/index.md
-    find "$folder" -type f -name "*.md"  -exec ./build.sh {} $@ \;
+    echo "$(find "$folder" -type f -name "*.md"  -exec ./build.sh {} $@ \;)"
 done
 
 ./build.sh docs/index.md 

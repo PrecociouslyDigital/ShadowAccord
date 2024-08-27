@@ -1,21 +1,14 @@
-fileName=$1
-outName=${fileName%.*}
-#remove spaces (can't use params cause cloudflare has a conniption)
-outName=$(echo "$outName" | tr ' ' '_' )
-#remove docs
-outName="${outName#"docs/"}"
+source template/get_filenames.sh
 
-shift
+#build pdf hook
+if [[ $1 == "--build-pdf" ]]; then
+    shift
+    ./build_pdf.sh "$fileName" $@
+fi
 
 echo "\033[0;36m     $fileName to out/$outName \033[0m"
 
 mkdir -p "out/$outName"
-
-if [[ $1 == "--build-pdf" ]]; then
-    shift
-    echo "building pdf"
-    mkdir -p "print/$outName"
-fi
 
 pandoc "$(pwd)/$fileName" \
     --katex \
@@ -30,6 +23,8 @@ pandoc "$(pwd)/$fileName" \
     --css template/pandoc.css \
     --css template/pandoc-solarized.css \
     --css template/tufte-extra.css \
+    --metadata title="$(basename "$outName")"\
+    --resource-path="$(dirname "$fileName")" \
     --output "$(pwd)/out/$outName/index.html" \
     $@
 
