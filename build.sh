@@ -23,7 +23,7 @@ pandoc "$(pwd)/$fileName" \
     --css template/pandoc.css \
     --css template/pandoc-solarized.css \
     --css template/tufte-extra.css \
-    --metadata title="$(basename "$outName")"\
+    --metadata title="$outBaseNameWithSpace"\
     --resource-path="$(dirname "$fileName")" \
     --output "$(pwd)/out/$outName/index.html" \
     $@
