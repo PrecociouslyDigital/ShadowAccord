@@ -64,7 +64,7 @@ body {
     }
 
     img:not([noinvert]){
-        filter: invert(88.1%) hue-rotate(88deg);
+        filter: invert(88.1%) hue-rotate(90deg);
     }
 }
 

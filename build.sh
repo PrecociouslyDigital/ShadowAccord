@@ -33,5 +33,5 @@ gsed -i -f template/post.sed "out/$outName/index.html"
 
 if [[ $fileName != "docs/index.md" ]]; then
     find "$(dirname "$fileName")" -type f ! -name "*.md" -exec cp {} "out/$(dirname "$outName")" \;
-    echo "- [$(basename "${fileName%.*}")]($outName/index.html)" >> "docs/index.md"
+    echo "- [$(basename "${fileName%.*}")](/$outName/index.html)" >> "docs/index.md"
 fi
