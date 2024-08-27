@@ -28,10 +28,10 @@ Returning to my room at the Lady's lodge, I met Cadigan and Volk, a man who I la
 
 [^Volk]: he was on trial for... something? I wasn't sure and I was too tired to listen closely. Also this was after I had found the house with the bodies and I missed most of his trial showing Pick the corpse house.
 
-[^skeletonwar]: ![ghost test](ghost test.png) <br/>
+[^skeletonwar]: ![skeleton war](skeleton.png 'Crude sketch of a stick figure stabbing another stick figure, flanked by the words "Unity Between Legions; Our Loyalties to Stygia are What Binds Us"') <br/>
     A rough drawing of one of the posters.
 
-[^crab]: ![ghost test](ghost test.png) <br/>
+[^crab]: ![crab](crab.png "Hand-drawn picture of a crab from the top") <br/>
     An image Cadigan so kindly drew for me of a crab. 
 
 ---
