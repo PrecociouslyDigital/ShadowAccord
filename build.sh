@@ -23,6 +23,7 @@ pandoc "$(pwd)/$fileName" \
     --css template/pandoc.css \
     --css template/pandoc-solarized.css \
     --css template/tufte-extra.css \
+    --css template/custom.css \
     --metadata title="$outBaseNameWithSpace"\
     --resource-path="$(dirname "$fileName")" \
     --output "$(pwd)/out/$outName/index.html" \
@@ -32,6 +33,7 @@ pandoc "$(pwd)/$fileName" \
 gsed -i -f template/post.sed "out/$outName/index.html"
 
 if [[ $fileName != "docs/index.md" ]]; then
+    fileName=${fileName%"/index.md"}
     find "$(dirname "$fileName")" -type f ! -name "*.md" -exec cp {} "out/$(dirname "$outName")" \;
     echo "- [$(basename "${fileName%.*}")](/$outName/index.html)" >> "docs/index.md"
 fi
