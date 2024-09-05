@@ -5,4 +5,6 @@ outBaseNameWithSpace="$(basename "$outName")"
 outName=$(echo "$outName" | tr ' ' '_' )
 #remove docs
 outName="${outName#"docs/"}"
+#respect index
+outName=${outName%"/index"}
 shift
