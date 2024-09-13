@@ -22,5 +22,6 @@ Sorcerers in Arthorne are able to manifest a phenomena by touching their target 
 
 ### Common Users
 Known sorcerers should be assumed to possess this phenomenon until evidence suggests otherwise. As this phenomenon affects memory, all known users will be listed in this section as a precaution.
+
 - Ren
-- Tavern Guy (not Cadiguan)
+- Azaleos
