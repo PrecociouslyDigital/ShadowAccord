@@ -3,6 +3,7 @@
 
 ### Affiliations
 - Church of Arthorne
+- Barristers
 
 ### Documented Phenomenon
 - TBD

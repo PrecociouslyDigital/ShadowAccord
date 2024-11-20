@@ -23,10 +23,10 @@ Cadiguan is safe for now. Ironically, it seems that I'm the one who's in peril n
 
 ---
 
-I've managed to escape my ethereal state! Unfortunately I'm not sure how I did it; I remember talking to Wick and some spirits of curiosity, then I got really dizzy and I could touch things again, just in time for dinner! I didn't make any progress on helping Cadiguan, but fortunately Father Marcus has been... busy. After dinner I went with Father Marcus, Constable Wesley, Judge Cyrus and Volk to retrieve Cadiguan from the Gaol. Cyrus appointed me a court witness and we had a trial where Cadiguan was sentenced to time served. Father Marcus then Blood Thralled Cadiguan[^see notes from conversation with Ren], which was part of the deal that would keep him safe from the Barristers.
+I've managed to escape my ethereal state! Unfortunately I'm not sure how I did it; I remember talking to Wick and some spirits of curiosity, then I got really dizzy and I could touch things again, just in time for dinner! I didn't make any progress on helping Cadiguan, but fortunately Father Marcus has been... busy. After dinner I went with Father Marcus, Constable Wesley, Judge Cyrus and Volk to retrieve Cadiguan from the Gaol. Cyrus appointed me a court witness and we had a trial where Cadiguan was sentenced to time served. Father Marcus then Blood Thralled Cadiguan^[see notes from conversation with Ren], which was part of the deal that would keep him safe from the Barristers.
 
 ### 15th of September, 1224
-Turns out ghosts can make treaties. The tavern this morning was host to negotiations between representatives of the Baron and representatives of The Legion, which is apparantly the earthly (or ghostly) authority on the other side[^Note: Get that heraldry to Wesley by next Market]. Cadiguan also seems to have mostly recovered from his ordeal; he's currently manning his shop. I think I'll go see how he's doing. We might take a stroll around town.
+Turns out ghosts can make treaties. The tavern this morning was host to negotiations between representatives of the Baron and representatives of The Legion, which is apparantly the earthly (or ghostly) authority on the other side^[Note: Get that heraldry to Wesley by next Market]. Cadiguan also seems to have mostly recovered from his ordeal; he's currently manning his shop. I think I'll go see how he's doing. We might take a stroll around town.
 
 ---
 

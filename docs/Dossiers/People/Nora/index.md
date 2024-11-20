@@ -3,6 +3,7 @@
 
 ### Affiliations
 - Wandering Bear
+- Barristers
 
 ### Documented Phenomenon
 - Mesmerization?

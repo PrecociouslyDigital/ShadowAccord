@@ -14,7 +14,7 @@ House Le Borne controls the Barony in which Arthorne resides. Also of the Barony
 
 The House of Roan controls the County to the West. Also of the County are the settlements of Pontivy, Loudeac, Josselin and unincorporated the rich farmland. Their heraldry consists of a Gule Field, with seven Mascles d'Or.
 
-## House of Redon
+### House of Redon
 
 ![](Redon.png "Redon Heraldry"){ width=200px }
 
