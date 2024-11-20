@@ -22,6 +22,7 @@ for folder in docs/*; do
     if [[ "$folder" == "docs/index.md" ]]; then
         continue
     fi
+    echo "" >> docs/index.md
     echo "### ${folder#"docs/"}" >> docs/index.md
     find "$folder" -type f -name "*.md"  -exec ./build.sh {} $@ \;
 done
