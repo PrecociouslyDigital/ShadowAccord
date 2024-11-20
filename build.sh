@@ -32,8 +32,8 @@ pandoc "$(pwd)/$fileName" \
 
 gsed -i -f template/post.sed "out/$outName/index.html"
 
-if [[ $fileName != "docs/index.md" ]]; then
+if [[ $fileName != "docs/Index.md" ]]; then
     fileName=${fileName%"/index.md"}
-    find "$(dirname "$fileName")" -type f ! -name "*.md" -exec cp {} "out/$(dirname "$outName")" \;
-    echo "- [$(basename "${fileName%.*}")](/$outName/index.html)" >> "docs/index.md"
+    find "$(dirname "$fileName")" -type f ! -name "*.md" -exec cp "{}" "out/$(dirname "$outName")" \;
+    echo "- [$(basename "${fileName%.*}")](/$outName/index.html)" >> "docs/Index.md"
 fi
