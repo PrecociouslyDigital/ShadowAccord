@@ -22,17 +22,21 @@ for folder in docs/*; do
     if [[ "$folder" == "docs/index.md" ]]; then
         continue
     fi
-    echo "" >> docs/index.md
-    echo "### ${folder#"docs/"}" >> docs/index.md
     if [[ "$folder" == "docs/Dossiers" ]]; then
+        echo "" >> docs/index.md
+        echo "### Dossiers" >> docs/index.md
         for category in docs/Dossiers/*; do
             if [[ "$category" == "docs/Dossiers/blank.png" ]]; then
                 continue
             fi
+            echo "" >> docs/index.md
             echo "#### ${category#"docs/Dossiers/"}" >> docs/index.md
             find "$category" -type f -name "*.md"  -exec ./build.sh {} $@ \;
         done
     else
+        echo "" >> docs/index.md
+        name="${folder#"docs/"}"
+        echo "### ${name:8} ${name:0:4}" >> docs/index.md
         find "$folder" -type f -name "*.md"  -exec ./build.sh {} $@ \;
     fi
 done
